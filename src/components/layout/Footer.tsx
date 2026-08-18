@@ -60,7 +60,7 @@ export function Footer() {
       <div className="w-full bg-background pt-1 pb-10 px-4 sm:px-8 md:px-12">
         <div className="mx-auto max-w-6xl">
           {/* Inner Card Panel */}
-          <div className="relative rounded-[2.5rem] bg-card p-8 sm:p-10 md:p-14 border border-border shadow-[var(--shadow-glow)] mb-8 md:mb-12 overflow-hidden">
+          <div className="relative rounded-2xl bg-card p-8 sm:p-10 md:p-14 border border-border shadow-[var(--shadow-glow)] mb-8 md:mb-12 overflow-hidden">
             {/* Center Divider */}
             <div className="hidden md:block absolute left-1/2 top-0 bottom-0 w-[1px] bg-border -translate-x-1/2 pointer-events-none" />
 
@@ -83,8 +83,8 @@ export function Footer() {
                     aria-label={label}
                     className={`group relative grid place-items-center border-[3.5px] border-[var(--social-foreground)] shadow-md transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl ${bgClass} ${
                       featured
-                        ? "size-16 sm:size-20 md:size-[5rem] rounded-[1.5rem] md:rounded-[1.65rem] scale-105"
-                        : "size-13 sm:size-15 md:size-[4.15rem] rounded-[1.25rem] md:rounded-[1.4rem]"
+                        ? "size-16 sm:size-20 md:size-[5rem] rounded-xl md:rounded-xl scale-105"
+                        : "size-13 sm:size-15 md:size-[4.15rem] rounded-xl md:rounded-xl"
                     }`}
                   >
                     <Icon
@@ -94,7 +94,7 @@ export function Footer() {
                       strokeWidth={2.2}
                     />
                     {featured && (
-                      <span className="absolute -bottom-3 grid size-6 sm:size-7 place-items-center rounded-full bg-card shadow-md border border-border">
+                      <span className="absolute -bottom-3 grid size-6 sm:size-7 place-items-center rounded-xl bg-card shadow-md border border-border">
                         <Play className="size-3 sm:size-3.5 fill-primary text-primary ms-0.5" />
                       </span>
                     )}

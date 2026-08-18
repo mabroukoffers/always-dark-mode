@@ -28,7 +28,7 @@ export function ProjectCard({ project, index, view = "grid" }: ProjectCardProps)
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.97 }}
       transition={{ duration: 0.35, delay: Math.min(index, 6) * 0.04 }}
-      className="group relative flex h-full flex-col overflow-hidden rounded-[2.5rem] bg-card border border-border p-6 shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-2 hover:border-border/60 text-card-foreground"
+      className="group relative flex h-full flex-col overflow-hidden rounded-2xl bg-card border border-border p-6 shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-2 hover:border-border/60 text-card-foreground"
     >
       <ProjectCardImage project={project} priority={index < 3} />
 
@@ -37,7 +37,7 @@ export function ProjectCard({ project, index, view = "grid" }: ProjectCardProps)
           <div className="flex items-start justify-between gap-3">
             <h3 className="font-['Oswald',sans-serif] text-2xl font-bold leading-tight text-card-foreground">{projectTitle(project)}</h3>
             {project.status && (
-              <span className="shrink-0 rounded-full bg-primary px-3 py-0.5 text-[10px] font-black text-primary-foreground uppercase tracking-wider">
+              <span className="shrink-0 rounded-xl bg-primary px-3 py-0.5 text-[10px] font-black text-primary-foreground uppercase tracking-wider">
                 {projectStatus(project.status)}
               </span>
             )}
@@ -91,9 +91,9 @@ function ProjectRow({ project, index }: { project: Project; index: number }) {
       animate={{ opacity: 1, y: 0 }}
       exit={{ opacity: 0, scale: 0.98 }}
       transition={{ duration: 0.3, delay: Math.min(index, 6) * 0.03 }}
-      className="group grid grid-cols-1 gap-5 overflow-hidden rounded-[2.2rem] bg-card p-5 border border-border shadow-lg text-card-foreground transition-all duration-300 hover:bg-card/90 sm:grid-cols-[220px_minmax(0,1fr)] sm:items-center"
+      className="group grid grid-cols-1 gap-5 overflow-hidden rounded-2xl bg-card p-5 border border-border shadow-lg text-card-foreground transition-all duration-300 hover:bg-card/90 sm:grid-cols-[220px_minmax(0,1fr)] sm:items-center"
     >
-      <div className="overflow-hidden rounded-[1.5rem]">
+      <div className="overflow-hidden rounded-xl">
         <ProjectCardImage project={project} compact priority={index < 2} />
       </div>
       <div className="min-w-0">
@@ -162,7 +162,7 @@ export function Badge({ children, className }: BadgeProps) {
   return (
     <span
       className={cn(
-        "rounded-full bg-primary px-3 py-1 font-sans text-[10px] font-black tracking-widest text-primary-foreground uppercase shadow-sm",
+        "rounded-xl bg-primary px-3 py-1 font-sans text-[10px] font-black tracking-widest text-primary-foreground uppercase shadow-sm",
         className,
       )}
     >
@@ -184,7 +184,7 @@ export function ProjectCardImage({
 }: ProjectCardImageProps) {
   const { category } = useLocalizedContent();
   return (
-    <div className={`relative overflow-hidden rounded-[1.75rem] border border-border ${compact ? "h-36" : "h-48"}`}>
+    <div className={`relative overflow-hidden rounded-xl border border-border ${compact ? "h-36" : "h-48"}`}>
       <SmartImage
         src={project.image}
         alt={`${project.title} preview`}
@@ -197,7 +197,7 @@ export function ProjectCardImage({
         imgClassName="transition-transform duration-700 ease-out group-hover:scale-110"
       />
       <div className="pointer-events-none absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent" />
-      <span className="absolute start-3 top-3 rounded-full bg-black/40 backdrop-blur-md px-3 py-1 text-[9px] font-black tracking-wider text-white border border-white/20 uppercase">
+      <span className="absolute start-3 top-3 rounded-xl bg-black/40 backdrop-blur-md px-3 py-1 text-[9px] font-black tracking-wider text-white border border-white/20 uppercase">
         {category(project.category)}
       </span>
     </div>

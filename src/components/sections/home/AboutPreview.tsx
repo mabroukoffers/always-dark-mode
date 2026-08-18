@@ -6,7 +6,7 @@ export function AboutPreview() {
   return (
     <section className="w-full bg-background py-16 px-4 sm:px-8 md:px-12 text-foreground select-none">
       <div className="mx-auto max-w-6xl">
-        <div className="relative rounded-[2.8rem] bg-card p-8 sm:p-12 md:p-14 border border-border shadow-[var(--shadow-glow)] overflow-hidden">
+        <div className="relative rounded-2xl bg-card p-8 sm:p-12 md:p-14 border border-border shadow-[var(--shadow-glow)] overflow-hidden">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-8 items-center">
             {/* Left Column (5 cols) */}
             <div className="md:col-span-5 flex flex-col justify-center items-start">
@@ -45,9 +45,9 @@ export function AboutPreview() {
               {/* CTA Button */}
               <a
                 href="#view"
-                className="group inline-flex items-center gap-3 rounded-full bg-background px-6 py-3 shadow-md border border-border transition-transform hover:scale-105"
+                className="group inline-flex items-center gap-3 rounded-xl bg-background px-6 py-3 shadow-md border border-border transition-transform hover:scale-105"
               >
-                <span className="grid size-6 place-items-center rounded-full bg-primary text-primary-foreground">
+                <span className="grid size-6 place-items-center rounded-xl bg-primary text-primary-foreground">
                   <Play className="size-3 fill-primary-foreground text-primary-foreground ms-0.5" />
                 </span>
                 <span className="font-sans text-xs font-black tracking-[0.2em] text-foreground uppercase">
@@ -58,7 +58,7 @@ export function AboutPreview() {
 
             {/* Right Column Portfolio Mockup Image (7 cols) */}
             <div className="md:col-span-7">
-              <div className="relative overflow-hidden rounded-2xl md:rounded-[2rem] shadow-[0_25px_60px_rgba(0,0,0,0.45)] border border-border group">
+              <div className="relative overflow-hidden rounded-2xl md:rounded-2xl shadow-[0_25px_60px_rgba(0,0,0,0.45)] border border-border group">
                 <SmartImage
                   src="/projects/microservices/Shop.jpg"
                   alt="Multi-tenant marketplace architecture"

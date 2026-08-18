@@ -43,7 +43,7 @@ export function ExperiencePreview() {
           {eventsData.map(({ id, year, iconText, featured }) => (
             <div
               key={id}
-              className={`flex flex-col sm:flex-row items-center justify-between gap-4 p-5 sm:p-6 rounded-[2rem] transition-all duration-300 ${
+              className={`flex flex-col sm:flex-row items-center justify-between gap-4 p-5 sm:p-6 rounded-2xl transition-all duration-300 ${
                 featured
                   ? "bg-foreground text-background shadow-[var(--shadow-glow)] scale-[1.02]"
                   : "bg-card text-card-foreground border border-border shadow-md hover:bg-card/90"
@@ -55,7 +55,7 @@ export function ExperiencePreview() {
                 </span>
 
                 <div
-                  className={`grid size-10 place-items-center rounded-full font-black text-sm ${
+                  className={`grid size-10 place-items-center rounded-xl font-black text-sm ${
                     featured ? "bg-primary text-primary-foreground" : "bg-foreground/15 text-primary"
                   }`}
                 >

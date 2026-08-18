@@ -19,7 +19,7 @@ export function SkillsPreview() {
         <div className="grid gap-4 sm:grid-cols-2">
           {featured.map((group, i) => (
             <Reveal key={group.title} delay={i * 0.08}>
-              <div className="bg-card border border-border h-full rounded-[2rem] p-6 shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-1">
+              <div className="bg-card border border-border h-full rounded-2xl p-6 shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-1">
                 <h3 className="mb-4 flex items-center gap-3 text-lg font-bold">
                   <span className="size-2 rounded-full bg-accent" />
                   {skillGroupTitle(group.title)}
@@ -29,13 +29,13 @@ export function SkillsPreview() {
                     <span
                       key={skill}
                       dir="ltr"
-                      className="rounded-full border border-border bg-foreground/10 px-3 py-1.5 text-sm text-foreground/80"
+                      className="rounded-xl border border-border bg-foreground/10 px-3 py-1.5 text-sm text-foreground/80"
                     >
                       {skill}
                     </span>
                   ))}
                   {group.skills.length > 5 && (
-                    <span className="rounded-full px-3 py-1.5 text-sm font-semibold text-accent">
+                    <span className="rounded-xl px-3 py-1.5 text-sm font-semibold text-accent">
                       +{group.skills.length - 5}
                     </span>
                   )}

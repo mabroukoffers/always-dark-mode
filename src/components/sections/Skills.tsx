@@ -14,7 +14,7 @@ export function Skills() {
         <div className="grid gap-6 sm:grid-cols-2">
           {skillGroups.map((group, i) => (
             <Reveal key={group.title} delay={i * 0.08}>
-              <div className="bg-card border border-border h-full rounded-[2rem] p-7 shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-1">
+              <div className="bg-card border border-border h-full rounded-2xl p-7 shadow-[var(--shadow-glow)] transition-transform hover:-translate-y-1">
                 <h3 className="mb-5 flex items-center gap-3 text-xl font-bold">
                   <span className="size-2 rounded-full bg-accent" />
                   {skillGroupTitle(group.title)}
@@ -24,7 +24,7 @@ export function Skills() {
                     <span
                       key={skill}
                       dir="ltr"
-                      className="rounded-full border border-border bg-foreground/10 px-3.5 py-1.5 text-sm text-foreground/80 transition-colors hover:border-primary/50 hover:text-primary"
+                      className="rounded-xl border border-border bg-foreground/10 px-3.5 py-1.5 text-sm text-foreground/80 transition-colors hover:border-primary/50 hover:text-primary"
                     >
                       {skill}
                     </span>

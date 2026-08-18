@@ -42,7 +42,7 @@ export function ProjectDetail() {
           <h1 className="font-display text-4xl font-bold text-foreground mb-4">{tr("project.notFound.title")}</h1>
           <Link
             to="/projects"
-            className="inline-flex items-center gap-2 rounded-full bg-card px-6 py-3 font-sans text-xs font-black tracking-widest text-card-foreground uppercase shadow-md border border-border hover:scale-105 transition-transform"
+            className="inline-flex items-center gap-2 rounded-xl bg-card px-6 py-3 font-sans text-xs font-black tracking-widest text-card-foreground uppercase shadow-md border border-border hover:scale-105 transition-transform"
           >
             <ArrowLeft className="size-4 rtl:rotate-180" />
             {tr("project.notFound.back")}
@@ -108,7 +108,7 @@ export function ProjectDetail() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.8, delay: 0.2 }}
-                className="relative rounded-[2.5rem] overflow-hidden bg-card border border-border shadow-2xl group"
+                className="relative rounded-2xl overflow-hidden bg-card border border-border shadow-2xl group"
               >
                 {/* Decorative browser dots */}
                 <div className="absolute top-0 inset-x-0 h-12 bg-foreground/5 border-b border-border/50 flex items-center px-6 gap-2 z-10 backdrop-blur-md">
@@ -141,7 +141,7 @@ export function ProjectDetail() {
                     {tr("project.detail.arch")}
                   </h2>
                 </div>
-                <div className="bg-card border border-border p-8 rounded-[2rem] shadow-[var(--shadow-glow)]">
+                <div className="bg-card border border-border p-8 rounded-2xl shadow-[var(--shadow-glow)]">
                   <TechStack techs={project.tech} />
                 </div>
               </section>
@@ -152,9 +152,9 @@ export function ProjectDetail() {
             <aside className="lg:col-span-4 space-y-8 lg:sticky lg:top-32">
               
               {/* Project Brief Card */}
-              <div className="bg-card border border-border rounded-[2rem] p-8 md:p-10 shadow-2xl relative overflow-hidden">
+              <div className="bg-card border border-border rounded-2xl p-8 md:p-10 shadow-2xl relative overflow-hidden">
                 {/* Subtle background glow */}
-                <div className="absolute -top-24 -right-24 size-64 bg-primary/10 blur-[100px] rounded-full pointer-events-none" />
+                <div className="absolute -top-24 -right-24 size-64 bg-primary/10 blur-[100px] rounded-xl pointer-events-none" />
                 
                 <h3 className="font-display text-2xl font-black uppercase mb-8 tracking-wide">{tr("project.detail.brief")}</h3>
                 
@@ -201,7 +201,7 @@ export function ProjectDetail() {
                       href={project.live}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group w-full inline-flex justify-center items-center gap-3 rounded-full bg-primary px-6 py-4 font-sans text-xs font-black tracking-widest text-primary-foreground uppercase shadow-lg hover:shadow-primary/25 transition-all hover:scale-[1.02]"
+                      className="group w-full inline-flex justify-center items-center gap-3 rounded-xl bg-primary px-6 py-4 font-sans text-xs font-black tracking-widest text-primary-foreground uppercase shadow-lg hover:shadow-primary/25 transition-all hover:scale-[1.02]"
                     >
                       <ExternalLink className="size-4" />
                       {tr("project.detail.visit")}
@@ -212,7 +212,7 @@ export function ProjectDetail() {
                       href={project.github}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="group w-full inline-flex justify-center items-center gap-3 rounded-full border border-border bg-foreground/5 px-6 py-4 font-sans text-xs font-black tracking-widest text-foreground uppercase hover:bg-foreground/10 transition-all"
+                      className="group w-full inline-flex justify-center items-center gap-3 rounded-xl border border-border bg-foreground/5 px-6 py-4 font-sans text-xs font-black tracking-widest text-foreground uppercase hover:bg-foreground/10 transition-all"
                     >
                       <Github className="size-4" />
                       {tr("project.detail.source")}
@@ -231,7 +231,7 @@ export function ProjectDetail() {
                 <Link
                   to="/projects/$id"
                   params={{ id: prevProject.id }}
-                  className="group relative overflow-hidden rounded-[2rem] bg-card p-8 border border-border shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl hover:border-primary/50"
+                  className="group relative overflow-hidden rounded-2xl bg-card p-8 border border-border shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl hover:border-primary/50"
                 >
                   <div className="absolute inset-0 bg-gradient-to-r from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10">
@@ -250,7 +250,7 @@ export function ProjectDetail() {
                 <Link
                   to="/projects/$id"
                   params={{ id: nextProject.id }}
-                  className="group relative overflow-hidden rounded-[2rem] bg-card p-8 border border-border shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 text-end"
+                  className="group relative overflow-hidden rounded-2xl bg-card p-8 border border-border shadow-lg transition-all hover:-translate-y-1 hover:shadow-xl hover:border-primary/50 text-end"
                 >
                   <div className="absolute inset-0 bg-gradient-to-l from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity" />
                   <div className="relative z-10 flex flex-col items-end">

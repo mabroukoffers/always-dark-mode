@@ -42,7 +42,7 @@ export function Contact({ showHeading = true }: { showHeading?: boolean } = {}) 
         </Reveal>
 
         <Reveal>
-          <form onSubmit={handleSubmit(onSubmit)} className="rounded-[2rem] bg-card border border-border shadow-[var(--shadow-glow)] space-y-5 p-7">
+          <form onSubmit={handleSubmit(onSubmit)} className="rounded-2xl bg-card border border-border shadow-[var(--shadow-glow)] space-y-5 p-7">
             <div>
               <label className="mb-2 block text-sm font-medium text-card-foreground">{tr("contact.name")}</label>
               <input {...register("name")} className={fieldClass} placeholder="Jane Doe" />
@@ -75,7 +75,7 @@ export function Contact({ showHeading = true }: { showHeading?: boolean } = {}) 
             <button
               type="submit"
               disabled={isSubmitting}
-              className="group w-full inline-flex items-center justify-center gap-2 rounded-full bg-primary px-6 py-3.5 font-sans text-sm font-black tracking-widest text-primary-foreground uppercase shadow-md transition-all hover:scale-105 disabled:opacity-60"
+              className="group w-full inline-flex items-center justify-center gap-2 rounded-xl bg-primary px-6 py-3.5 font-sans text-sm font-black tracking-widest text-primary-foreground uppercase shadow-md transition-all hover:scale-105 disabled:opacity-60"
             >
               {tr("contact.send")}
               <Send className="size-4 transition-transform group-hover:translate-x-0.5" />
