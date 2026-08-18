@@ -14,17 +14,24 @@ import { useI18n } from "@/lib/i18n";
 export const Route = createFileRoute("/projects/$id")({
   head: ({ params }) => {
     const project = projects.find((p) => p.id === params.id);
+    const title = `${project?.title || "Project"} | Marketplace Systems Architect`;
+    const description = project?.description || "Project details";
     return {
       meta: [
-        { title: `${project?.title || "Project"} | Marketplace Systems Architect` },
-        {
-          name: "description",
-          content: project?.description || "Project details",
-        },
+        { title },
+        { name: "description", content: description },
+        { property: "og:title", content: title },
+        { property: "og:description", content: description },
+        { property: "og:type", content: "article" },
+        { property: "og:url", content: `/projects/${params.id}` },
+        { name: "twitter:card", content: "summary_large_image" },
+        { name: "twitter:title", content: title },
+        { name: "twitter:description", content: description },
       ],
       links: [{ rel: "canonical", href: `/projects/${params.id}` }],
     };
   },
+
   component: ProjectDetail,
   pendingComponent: ProjectDetailSkeleton,
 });
