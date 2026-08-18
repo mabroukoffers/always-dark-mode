@@ -1,11 +1,13 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Menu, X, Github, Linkedin, Sun, Moon, Globe } from "lucide-react";
 import { Link } from "@tanstack/react-router";
 import { useTheme } from "@/lib/theme";
 import { useI18n } from "@/lib/i18n";
+import { cn } from "@/lib/utils";
 
 export function Navbar() {
   const [open, setOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { theme, toggleTheme } = useTheme();
   const { lang, toggleLang, tr } = useI18n();
 
@@ -16,13 +18,33 @@ export function Navbar() {
     { key: "nav.contact", to: "/contact" },
   ] as const;
 
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 24);
+    onScroll();
+    window.addEventListener("scroll", onScroll, { passive: true });
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed inset-x-0 top-0 z-50 px-4 pt-4 pb-2 bg-background border-b border-border transition-colors duration-300">
-      <nav className="mx-auto flex max-w-6xl items-center justify-between">
+    <header
+      className={cn(
+        "fixed inset-x-0 top-0 z-50 flex justify-center pointer-events-none transition-[padding] duration-500 ease-out",
+        scrolled ? "py-1.5" : "py-4"
+      )}
+    >
+      <nav
+        className={cn(
+          "pointer-events-auto flex items-center justify-between rounded-full border transition-all duration-500 ease-out",
+          "w-[calc(100%-1.5rem)] max-w-5xl",
+          scrolled
+            ? "bg-background/75 backdrop-blur-xl shadow-[0_8px_30px_-6px_rgba(0,0,0,0.25)] border-border/70 py-2 px-4"
+            : "bg-background/40 backdrop-blur-md shadow-[0_4px_20px_-8px_rgba(0,0,0,0.15)] border-border/40 py-3 px-5"
+        )}
+      >
         {/* Left: Logo Badge Pill */}
         <Link
           to="/"
-          className="group flex items-center gap-2.5 rounded-xl bg-card text-card-foreground px-4 py-2 shadow-md border border-border transition-transform hover:scale-105 select-none"
+          className="group flex items-center gap-2.5 rounded-xl bg-card text-card-foreground px-3 py-1.5 shadow-sm border border-border transition-all duration-500 hover:scale-105 select-none"
           aria-label={tr("common.home")}
         >
           {/* Prefix dots */}
@@ -67,7 +89,7 @@ export function Navbar() {
           <button
             onClick={toggleTheme}
             aria-label={tr("common.theme")}
-            className="grid size-9 place-items-center rounded-xl bg-foreground/10 border border-border text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
+            className="grid size-9 place-items-center rounded-full bg-foreground/10 border border-border text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
             title={tr("common.theme")}
           >
             {theme === "dark" ? <Sun className="size-4 text-[#FFD000]" /> : <Moon className="size-4 text-[#FF4B35]" />}
@@ -77,7 +99,7 @@ export function Navbar() {
           <button
             onClick={toggleLang}
             aria-label={tr("common.language")}
-            className="flex h-9 items-center gap-1.5 rounded-xl bg-foreground/10 border border-border px-3 text-xs font-extrabold text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
+            className="flex h-9 items-center gap-1.5 rounded-full bg-foreground/10 border border-border px-3 text-xs font-extrabold text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
             title={tr("common.language")}
           >
             <Globe className="size-3.5 text-[#FF4B35]" />
@@ -90,7 +112,7 @@ export function Navbar() {
               href="https://github.com/Mostafa-SAID7"
               target="_blank"
               rel="noopener noreferrer"
-              className="grid size-9 place-items-center rounded-xl bg-foreground/10 border border-border text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
+              className="grid size-9 place-items-center rounded-full bg-foreground/10 border border-border text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
               aria-label="GitHub Profile"
             >
               <Github className="size-4" />
@@ -99,7 +121,7 @@ export function Navbar() {
               href="https://linkedin.com/in/mostafasamirsaid"
               target="_blank"
               rel="noopener noreferrer"
-              className="grid size-9 place-items-center rounded-xl bg-foreground/10 border border-border text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
+              className="grid size-9 place-items-center rounded-full bg-foreground/10 border border-border text-foreground transition-all hover:bg-foreground/20 hover:scale-105"
               aria-label="LinkedIn Profile"
             >
               <Linkedin className="size-4" />
@@ -110,7 +132,7 @@ export function Navbar() {
           <button
             onClick={() => setOpen((o) => !o)}
             aria-label={tr("common.menu")}
-            className="grid size-10 place-items-center rounded-xl bg-foreground/10 border border-border text-foreground md:hidden"
+            className="grid size-10 place-items-center rounded-full bg-foreground/10 border border-border text-foreground md:hidden"
           >
             {open ? <X className="size-5" /> : <Menu className="size-5" />}
           </button>
@@ -119,13 +141,13 @@ export function Navbar() {
 
       {/* Mobile Drawer */}
       {open && (
-        <div className="mx-auto mt-3 flex max-w-6xl flex-col gap-2 rounded-[2rem] bg-card text-card-foreground p-5 md:hidden border border-border shadow-xl">
+        <div className="pointer-events-auto absolute top-full inset-x-0 mx-auto mt-2 flex w-[calc(100%-1.5rem)] max-w-md flex-col gap-1 rounded-3xl bg-card text-card-foreground p-4 md:hidden border border-border shadow-2xl">
           {navLinks.map((l) => (
             <Link
               key={l.key}
               to={l.to}
               onClick={() => setOpen(false)}
-              className="rounded-xl px-4 py-2.5 text-start font-sans text-xs font-black tracking-[0.2em] uppercase text-foreground hover:bg-foreground/10"
+              className="rounded-2xl px-4 py-2.5 text-start font-sans text-xs font-black tracking-[0.2em] uppercase text-foreground hover:bg-foreground/10"
             >
               {tr(l.key)}
             </Link>
