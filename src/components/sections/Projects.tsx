@@ -18,6 +18,9 @@ export function Projects() {
   return (
     <section id="works" className="w-full bg-background py-16 px-4 sm:px-8 md:px-12 text-foreground select-none">
       <div className="mx-auto max-w-6xl">
+        <h2 className="mb-8 font-display text-3xl sm:text-4xl md:text-5xl font-bold uppercase tracking-tight text-foreground text-center md:text-start">
+          {tr("works.title")}
+        </h2>
         <div className="grid gap-6 grid-cols-1 md:grid-cols-3">
           {featuredWorks.map((project, index) => {
             const num = `0${index + 1}`;
