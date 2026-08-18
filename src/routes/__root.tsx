@@ -16,28 +16,7 @@ import { ThemeProvider, themeBootstrapScript } from "@/lib/theme";
 import { I18nProvider, langBootstrapScript } from "@/lib/i18n";
 import { useSmoothScroll } from "@/lib/smooth-scroll";
 import { WelcomeModal } from "@/components/ui/WelcomeModal";
-
-function NotFoundComponent() {
-  return (
-    <div className="flex min-h-screen items-center justify-center bg-background px-4">
-      <div className="max-w-md text-center">
-        <h1 className="text-7xl font-black text-foreground">404</h1>
-        <h2 className="mt-4 text-xl font-semibold text-foreground">Page not found</h2>
-        <p className="mt-2 text-sm text-muted-foreground">
-          The page you're looking for doesn't exist or has been moved.
-        </p>
-        <div className="mt-6">
-          <Link
-            to="/"
-            className="btn-accent"
-          >
-            Go home
-          </Link>
-        </div>
-      </div>
-    </div>
-  );
-}
+import { NotFound as NotFoundComponent } from "@/components/sections/NotFound";
 
 function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
   // Use error-capture's describeError to properly format error details
