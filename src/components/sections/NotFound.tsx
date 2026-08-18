@@ -106,7 +106,7 @@ export function NotFound() {
           className="relative mt-6"
         >
           <motion.div
-            style={reduce ? undefined : { rotateX, rotateY, transformStyle: "preserve-3d" }}
+            {...(reduce ? {} : { style: { rotateX, rotateY, transformStyle: "preserve-3d" as const } })}
             className="relative inline-block"
           >
             <motion.span
@@ -200,7 +200,7 @@ export function NotFound() {
           {NAV.map((item, i) => (
             <motion.div
               key={item.to}
-              whileHover={reduce ? undefined : { y: -3, scale: 1.04 }}
+              {...(reduce ? {} : { whileHover: { y: -3, scale: 1.04 } })}
               transition={{ type: "spring", stiffness: 320, damping: 18, delay: i * 0.01 }}
             >
               <Link
