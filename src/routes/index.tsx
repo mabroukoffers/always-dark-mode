@@ -13,12 +13,21 @@ import heroIso from "@/assets/hero-iso.webp";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Oskar Kadera | Visual Artist & Illustrator" },
+      { title: "Mostafa Samir | Senior Full Stack Engineer" },
       {
         name: "description",
         content:
-          "World known British Visual Artist and Illustrator portfolio.",
+          "Portfolio of Mostafa Samir, Senior Full Stack Engineer specializing in .NET 8 microservices and Next.js marketplaces.",
       },
+      { property: "og:title", content: "Mostafa Samir | Senior Full Stack Engineer" },
+      {
+        property: "og:description",
+        content:
+          "Portfolio of Mostafa Samir, Senior Full Stack Engineer specializing in .NET 8 microservices and Next.js marketplaces.",
+      },
+      { property: "og:type", content: "website" },
+      { name: "twitter:card", content: "summary_large_image" },
+
     ],
     links: [
       { rel: "canonical", href: "/" },
