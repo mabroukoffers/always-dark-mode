@@ -57,11 +57,13 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
             onClick={() => {
               router.invalidate();
               reset();
+              if (typeof window !== "undefined") window.location.reload();
             }}
             className="btn-accent"
           >
             Try again
           </button>
+
           <a
             href="/"
             className="inline-flex items-center justify-center rounded-xl border border-border px-5 py-2.5 text-sm font-bold text-foreground"
