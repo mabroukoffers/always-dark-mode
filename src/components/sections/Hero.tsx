@@ -31,6 +31,7 @@ export function Hero() {
             {tr("hero.name.first")}
             <br />
             {tr("hero.name.last")}
+            <span className="sr-only"> — {tr("hero.subtitle")}</span>
           </motion.h1>
 
           {/* Subtitle & Trophy Badge */}

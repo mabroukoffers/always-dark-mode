@@ -83,7 +83,7 @@ export function ExperiencePreview() {
                 </div>
 
                 {featured ? (
-                  <button className="grid size-10 place-items-center rounded-xl bg-primary text-primary-foreground shadow-sm hover:scale-105 transition-transform">
+                  <button aria-label={tr(`events.item.${id}.topic`)} className="grid size-10 place-items-center rounded-xl bg-primary text-primary-foreground shadow-sm hover:scale-105 transition-transform">
                     <ArrowRight className="size-4 stroke-[3] rtl:rotate-180" />
                   </button>
                 ) : (

@@ -20,7 +20,7 @@ export const t: Dict = {
     en: "Senior Full Stack Engineer with 4+ years specializing in high-performance .NET 8 Microservices & Next.js Marketplaces.",
     ar: "مهندس متكامل أول بخبرة تزيد عن 4 سنوات، متخصص في الخدمات المصغرة عالية الأداء باستخدام .NET 8 ومنصات التجارة الإلكترونية بـ Next.js.",
   },
-  "hero.cta": { en: "LEARN MORE", ar: "اكتشف المزيد" },
+  "hero.cta": { en: "VIEW MY WORK", ar: "شاهد أعمالي" },
 
   "about.preview.title1": { en: "4+ Years of", ar: "4+ سنوات من" },
   "about.preview.title2": { en: "Full Stack Excellence", ar: "التميز التقني" },
@@ -193,7 +193,7 @@ export const t: Dict = {
     en: "Microsoft Certified proficiency in Azure cloud architecture, DevOps, microservices & enterprise security.",
     ar: "اعتماد من مايكروسوفت في معمارية سحابة Azure و DevOps والخدمات المصغّرة وأمن المؤسسات.",
   },
-  "awards.learnMore": { en: "LEARN MORE", ar: "اعرف المزيد" },
+  "awards.learnMore": { en: "VIEW AWARD DETAILS", ar: "تفاصيل الجائزة" },
   "awards.bsc": { en: "B.Sc. in Computer Science (HTI)", ar: "بكالوريوس علوم الحاسب (HTI)" },
   "awards.ddd": { en: "Clean Architecture & DDD Expert", ar: "خبير المعمارية النظيفة و DDD" },
 
