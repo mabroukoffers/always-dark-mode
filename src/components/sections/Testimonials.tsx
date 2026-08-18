@@ -27,14 +27,14 @@ export function Testimonials() {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setActiveIdx((i) => (i > 0 ? i - 1 : 2))}
-                className="grid size-11 place-items-center rounded-full bg-foreground/10 border border-border text-foreground hover:bg-foreground/20 transition-all"
+                className="grid size-11 place-items-center rounded-xl bg-foreground/10 border border-border text-foreground hover:bg-foreground/20 transition-all"
                 aria-label={tr("awards.prev")}
               >
                 <ChevronLeft className="size-5 rtl:rotate-180" />
               </button>
               <button
                 onClick={() => setActiveIdx((i) => (i < 2 ? i + 1 : 0))}
-                className="grid size-11 place-items-center rounded-full bg-foreground/10 border border-border text-foreground hover:bg-foreground/20 transition-all"
+                className="grid size-11 place-items-center rounded-xl bg-foreground/10 border border-border text-foreground hover:bg-foreground/20 transition-all"
                 aria-label={tr("awards.next")}
               >
                 <ChevronRight className="size-5 rtl:rotate-180" />
@@ -44,12 +44,12 @@ export function Testimonials() {
 
           {/* Center Column: Featured Award Card (4 cols) */}
           <div className="lg:col-span-4">
-            <div className="relative rounded-[2.5rem] bg-card p-8 border border-border shadow-[var(--shadow-glow)] flex flex-col items-center text-center">
-              <span className="rounded-full bg-foreground/10 px-4 py-1 font-sans text-[10px] font-black tracking-widest text-primary uppercase mb-6 border border-border">
+            <div className="relative rounded-2xl bg-card p-8 border border-border shadow-[var(--shadow-glow)] flex flex-col items-center text-center">
+              <span className="rounded-xl bg-foreground/10 px-4 py-1 font-sans text-[10px] font-black tracking-widest text-primary uppercase mb-6 border border-border">
                 2023
               </span>
 
-              <div className="grid size-16 place-items-center rounded-full bg-foreground/15 text-foreground mb-6 border border-border shadow-inner">
+              <div className="grid size-16 place-items-center rounded-xl bg-foreground/15 text-foreground mb-6 border border-border shadow-inner">
                 <Award className="size-8 text-primary" />
               </div>
 
@@ -63,9 +63,9 @@ export function Testimonials() {
 
               <a
                 href="#learn"
-                className="group inline-flex items-center gap-3 rounded-full bg-background px-6 py-3 shadow-md border border-border transition-transform hover:scale-105"
+                className="group inline-flex items-center gap-3 rounded-xl bg-background px-6 py-3 shadow-md border border-border transition-transform hover:scale-105"
               >
-                <span className="grid size-6 place-items-center rounded-full bg-primary text-primary-foreground">
+                <span className="grid size-6 place-items-center rounded-xl bg-primary text-primary-foreground">
                   <Play className="size-3 fill-primary-foreground text-primary-foreground ms-0.5" />
                 </span>
                 <span className="font-sans text-xs font-black tracking-[0.2em] text-foreground uppercase">
@@ -78,27 +78,27 @@ export function Testimonials() {
           {/* Right Column: 2 Stacked Award Cards (4 cols) */}
           <div className="lg:col-span-4 flex flex-col gap-5">
             {/* Award Item 1 */}
-            <div className="rounded-[2rem] bg-card p-6 border border-border shadow-md flex flex-col items-center text-center hover:bg-card/90 transition-all">
-              <div className="grid size-12 place-items-center rounded-full bg-foreground/10 text-foreground mb-3">
+            <div className="rounded-2xl bg-card p-6 border border-border shadow-md flex flex-col items-center text-center hover:bg-card/90 transition-all">
+              <div className="grid size-12 place-items-center rounded-xl bg-foreground/10 text-foreground mb-3">
                 <Compass className="size-6 text-primary" />
               </div>
               <h4 className="font-['Oswald',sans-serif] text-lg font-bold text-card-foreground mb-3 leading-tight max-w-[220px]">
                 {tr("awards.bsc")}
               </h4>
-              <span className="rounded-full bg-foreground/10 px-3 py-0.5 font-sans text-[9px] font-black tracking-widest text-primary uppercase border border-border">
+              <span className="rounded-xl bg-foreground/10 px-3 py-0.5 font-sans text-[9px] font-black tracking-widest text-primary uppercase border border-border">
                 2021
               </span>
             </div>
 
             {/* Award Item 2 */}
-            <div className="rounded-[2rem] bg-card p-6 border border-border shadow-md flex flex-col items-center text-center hover:bg-card/90 transition-all">
-              <div className="grid size-12 place-items-center rounded-full bg-foreground/10 text-foreground mb-3">
+            <div className="rounded-2xl bg-card p-6 border border-border shadow-md flex flex-col items-center text-center hover:bg-card/90 transition-all">
+              <div className="grid size-12 place-items-center rounded-xl bg-foreground/10 text-foreground mb-3">
                 <ShieldCheck className="size-6 text-primary" />
               </div>
               <h4 className="font-['Oswald',sans-serif] text-lg font-bold text-card-foreground mb-3 leading-tight max-w-[220px]">
                 {tr("awards.ddd")}
               </h4>
-              <span className="rounded-full bg-foreground/10 px-3 py-0.5 font-sans text-[9px] font-black tracking-widest text-primary uppercase border border-border">
+              <span className="rounded-xl bg-foreground/10 px-3 py-0.5 font-sans text-[9px] font-black tracking-widest text-primary uppercase border border-border">
                 2024
               </span>
             </div>

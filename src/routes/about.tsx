@@ -39,7 +39,7 @@ function AboutPage() {
       <main className="mx-auto max-w-6xl px-4 sm:px-8 md:px-12">
         {/* Header Banner */}
         <section className="py-12 text-center">
-          <span className="rounded-full bg-foreground/10 px-4 py-1.5 font-sans text-xs font-black tracking-[0.25em] text-primary uppercase border border-border inline-block mb-4">
+          <span className="rounded-xl bg-foreground/10 px-4 py-1.5 font-sans text-xs font-black tracking-[0.25em] text-primary uppercase border border-border inline-block mb-4">
             {tr("about.page.eyebrow")}
           </span>
           <h1 className="font-['Oswald',sans-serif] text-5xl sm:text-6xl md:text-7xl font-bold text-foreground tracking-tight uppercase leading-tight mb-4">
@@ -56,7 +56,7 @@ function AboutPage() {
             {stats.map((s) => (
               <div
                 key={s.key}
-                className="rounded-[2rem] bg-card p-6 text-center border border-border shadow-lg"
+                className="rounded-2xl bg-card p-6 text-center border border-border shadow-lg"
               >
                 <div
                   dir="ltr"
@@ -82,7 +82,7 @@ function AboutPage() {
             {principles.map((p) => (
               <div
                 key={p.titleKey}
-                className="rounded-[2.5rem] bg-card p-8 border border-border shadow-[var(--shadow-glow)]"
+                className="rounded-2xl bg-card p-8 border border-border shadow-[var(--shadow-glow)]"
               >
                 <h3 className="font-['Oswald',sans-serif] text-2xl font-bold text-card-foreground flex items-center gap-3 mb-3">
                   <CheckCircle2 className="size-5 text-primary" />
@@ -98,14 +98,14 @@ function AboutPage() {
           <div className="mt-12 flex justify-center gap-4 flex-wrap">
             <Link
               to="/skills"
-              className="inline-flex items-center gap-2 rounded-full bg-card px-6 py-3 font-sans text-xs font-black tracking-widest text-card-foreground uppercase shadow-md border border-border hover:scale-105 transition-transform"
+              className="inline-flex items-center gap-2 rounded-xl bg-card px-6 py-3 font-sans text-xs font-black tracking-widest text-card-foreground uppercase shadow-md border border-border hover:scale-105 transition-transform"
             >
               {tr("about.page.skillsCta")}
               <ArrowRight className="size-4 rtl:rotate-180" />
             </Link>
             <Link
               to="/contact"
-              className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 font-sans text-xs font-black tracking-widest text-primary-foreground uppercase shadow-md hover:scale-105 transition-transform"
+              className="inline-flex items-center gap-2 rounded-xl bg-primary px-6 py-3 font-sans text-xs font-black tracking-widest text-primary-foreground uppercase shadow-md hover:scale-105 transition-transform"
             >
               {tr("about.page.contactCta")}
               <ArrowRight className="size-4 rtl:rotate-180" />

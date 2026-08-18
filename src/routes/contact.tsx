@@ -34,7 +34,7 @@ function ContactPage() {
       <main className="mx-auto max-w-6xl px-4 sm:px-8 md:px-12">
         {/* Banner */}
         <section className="py-12 text-center">
-          <span className="rounded-full bg-foreground/10 px-4 py-1.5 font-sans text-xs font-black tracking-[0.25em] text-primary uppercase border border-border inline-block mb-4">
+          <span className="rounded-xl bg-foreground/10 px-4 py-1.5 font-sans text-xs font-black tracking-[0.25em] text-primary uppercase border border-border inline-block mb-4">
             {tr("contact.page.eyebrow")}
           </span>
           <h1 className="font-['Oswald',sans-serif] text-5xl sm:text-6xl md:text-7xl font-bold text-foreground tracking-tight uppercase leading-tight mb-4">
@@ -51,9 +51,9 @@ function ContactPage() {
             {channels.map(({ Icon, labelKey, value, valueKey, href }) => (
               <div
                 key={labelKey}
-                className="rounded-[2.5rem] bg-card p-7 border border-border shadow-lg text-center flex flex-col items-center justify-center hover:-translate-y-1 transition-transform"
+                className="rounded-2xl bg-card p-7 border border-border shadow-lg text-center flex flex-col items-center justify-center hover:-translate-y-1 transition-transform"
               >
-                <div className="grid size-12 place-items-center rounded-full bg-foreground/10 text-card-foreground mb-4 border border-border">
+                <div className="grid size-12 place-items-center rounded-xl bg-foreground/10 text-card-foreground mb-4 border border-border">
                   <Icon className="size-5 text-primary" />
                 </div>
                 <span className="font-sans text-[10px] font-black tracking-[0.2em] text-card-foreground/80 uppercase mb-1">

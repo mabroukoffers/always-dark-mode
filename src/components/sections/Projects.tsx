@@ -31,7 +31,7 @@ export function Projects() {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: index * 0.1 }}
-                className="relative flex flex-col justify-between rounded-[2.5rem] bg-card p-7 border border-border shadow-[var(--shadow-glow)] group hover:-translate-y-2 transition-all duration-300"
+                className="relative flex flex-col justify-between rounded-2xl bg-card p-7 border border-border shadow-[var(--shadow-glow)] group hover:-translate-y-2 transition-all duration-300"
               >
                 <div>
                   {/* Header Row */}
@@ -44,13 +44,13 @@ export function Projects() {
                         {category(project.category)}
                       </span>
                     </div>
-                    <div className="grid size-9 place-items-center rounded-full bg-foreground/10 border border-border text-card-foreground">
+                    <div className="grid size-9 place-items-center rounded-xl bg-foreground/10 border border-border text-card-foreground">
                       <Icon className="size-4 text-primary" />
                     </div>
                   </div>
 
                   {/* Card Artwork Image Container */}
-                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-[1.75rem] mb-5 shadow-[0_10px_25px_rgba(0,0,0,0.25)] border border-border group-hover:border-border/60 transition-colors">
+                  <div className="relative aspect-[4/3] w-full overflow-hidden rounded-xl mb-5 shadow-[0_10px_25px_rgba(0,0,0,0.25)] border border-border group-hover:border-border/60 transition-colors">
                     <SmartImage
                       src={project.image}
                       alt={projectTitle(project)}
@@ -61,7 +61,7 @@ export function Projects() {
                     <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-black/10 to-transparent opacity-80 group-hover:opacity-60 transition-opacity" />
 
                     {/* Top-Right Badge Overlay */}
-                    <div className="absolute top-3 end-3 rounded-full bg-black/40 backdrop-blur-md px-3 py-1 text-[9px] font-black tracking-wider text-white border border-white/20 uppercase">
+                    <div className="absolute top-3 end-3 rounded-xl bg-black/40 backdrop-blur-md px-3 py-1 text-[9px] font-black tracking-wider text-white border border-white/20 uppercase">
                       {projectType(project.type)}
                     </div>
                   </div>
@@ -82,13 +82,13 @@ export function Projects() {
                       <span
                         key={t}
                         dir="ltr"
-                        className="keep-latin rounded-full bg-primary/10 border border-primary/20 px-3 py-1 text-[9px] font-black tracking-widest text-primary uppercase shadow-sm"
+                        className="keep-latin rounded-xl bg-primary/10 border border-primary/20 px-3 py-1 text-[9px] font-black tracking-widest text-primary uppercase shadow-sm"
                       >
                         {t}
                       </span>
                     ))}
                     {project.tech.length > 3 && (
-                      <span className="rounded-full bg-foreground/5 border border-border px-2 py-1 text-[9px] font-black tracking-widest text-foreground uppercase shadow-sm">
+                      <span className="rounded-xl bg-foreground/5 border border-border px-2 py-1 text-[9px] font-black tracking-widest text-foreground uppercase shadow-sm">
                         +{project.tech.length - 3}
                       </span>
                     )}

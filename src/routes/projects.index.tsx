@@ -112,7 +112,7 @@ export function ProjectsPage() {
           <div className="mx-auto max-w-6xl px-5">
             <Reveal>
               <header className="mb-10 max-w-2xl text-center md:text-start">
-                <span className="rounded-full bg-foreground/10 px-4 py-1.5 font-sans text-xs font-black tracking-[0.25em] text-primary uppercase border border-border inline-block mb-3">
+                <span className="rounded-xl bg-foreground/10 px-4 py-1.5 font-sans text-xs font-black tracking-[0.25em] text-primary uppercase border border-border inline-block mb-3">
                   {tr("projects.index.eyebrow")}
                 </span>
                 <h1 className="font-display text-4xl sm:text-5xl md:text-6xl font-bold text-foreground tracking-tight uppercase">
@@ -126,7 +126,7 @@ export function ProjectsPage() {
 
             {/* Toolbar: search + sort + view mode */}
             <div className="sticky top-24 z-20 -mx-5 mb-6 px-5 py-2">
-              <div className="rounded-[2rem] bg-card p-3.5 border border-border shadow-[var(--shadow-glow)] grid grid-cols-1 gap-3 md:grid-cols-[minmax(0,1fr)_auto_auto] md:items-center">
+              <div className="rounded-2xl bg-card p-3.5 border border-border shadow-[var(--shadow-glow)] grid grid-cols-1 gap-3 md:grid-cols-[minmax(0,1fr)_auto_auto] md:items-center">
                 {/* Search Box */}
                 <div className="relative min-w-0">
                   <label htmlFor="project-search" className="sr-only">
@@ -206,7 +206,7 @@ export function ProjectsPage() {
                   key={f}
                   onClick={() => setFilter(f)}
                   aria-pressed={filter === f}
-                  className={`rounded-full px-4 sm:px-5 py-2 sm:py-2.5 text-[11px] sm:text-xs font-black tracking-widest uppercase transition-all duration-200 ${
+                  className={`rounded-xl px-4 sm:px-5 py-2 sm:py-2.5 text-[11px] sm:text-xs font-black tracking-widest uppercase transition-all duration-200 ${
                     filter === f
                       ? "bg-primary text-primary-foreground shadow-md scale-105"
                       : "border border-border bg-foreground/10 text-foreground/90 hover:bg-foreground/20"
@@ -237,7 +237,7 @@ export function ProjectsPage() {
                     setSearchQuery("");
                     setSort("default");
                   }}
-                  className="inline-flex items-center gap-1.5 rounded-full bg-foreground/10 border border-border px-4 py-1.5 font-sans text-xs font-black tracking-wider uppercase text-foreground hover:bg-foreground/20 transition-colors"
+                  className="inline-flex items-center gap-1.5 rounded-xl bg-foreground/10 border border-border px-4 py-1.5 font-sans text-xs font-black tracking-wider uppercase text-foreground hover:bg-foreground/20 transition-colors"
                 >
                   <X className="size-3.5 text-primary" />
                   {tr("projects.index.reset")}

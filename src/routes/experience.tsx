@@ -26,7 +26,7 @@ function ExperiencePage() {
       <Navbar />
       <main className="mx-auto max-w-6xl px-4 sm:px-8 md:px-12">
         <section className="py-12 text-center">
-          <span className="rounded-full bg-foreground/10 px-4 py-1.5 font-sans text-xs font-black tracking-[0.25em] text-primary uppercase border border-border inline-block mb-4">
+          <span className="rounded-xl bg-foreground/10 px-4 py-1.5 font-sans text-xs font-black tracking-[0.25em] text-primary uppercase border border-border inline-block mb-4">
             {tr("experience.page.eyebrow")}
           </span>
           <h1 className="font-['Oswald',sans-serif] text-5xl sm:text-6xl md:text-7xl font-bold text-foreground tracking-tight uppercase leading-tight mb-4">

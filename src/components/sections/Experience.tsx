@@ -55,7 +55,7 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
             <motion.div key={item.company} className="relative" variants={itemVariants}>
               {/* Timeline dot */}
               <div className="absolute start-0 top-4 z-10 md:left-1/2 md:-translate-x-1/2">
-                <div className="flex size-11 items-center justify-center rounded-full border-2 border-background bg-gradient-to-br from-accent to-accent/80 shadow-lg shadow-accent/20 sm:size-16">
+                <div className="flex size-11 items-center justify-center rounded-xl border-2 border-background bg-gradient-to-br from-accent to-accent/80 shadow-lg shadow-accent/20 sm:size-16">
                   <Briefcase className="size-5 text-accent-foreground sm:size-7" />
                 </div>
               </div>
@@ -65,14 +65,14 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
                 className={`ms-14 sm:ms-24 md:w-1/2 ${index % 2 === 1 ? "md:ms-auto md:me-0 md:pe-12" : "md:ms-0 md:ps-12"}`}
               >
                 <Reveal delay={index * 0.1}>
-                  <div className="group bg-card border border-border relative overflow-hidden rounded-[2rem] p-4 shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-2 sm:p-6 md:p-8">
+                  <div className="group bg-card border border-border relative overflow-hidden rounded-2xl p-4 shadow-[var(--shadow-glow)] transition-all duration-300 hover:-translate-y-2 sm:p-6 md:p-8">
                     {/* Accent corner */}
-                    <div className="absolute -end-12 -top-12 size-32 rounded-full bg-accent/5 blur-3xl transition-all duration-500 group-hover:bg-accent/10" />
+                    <div className="absolute -end-12 -top-12 size-32 rounded-xl bg-accent/5 blur-3xl transition-all duration-500 group-hover:bg-accent/10" />
 
                     {/* Content */}
                     <div className="relative z-10">
                       {/* Period badge */}
-                      <div className="inline-flex items-center gap-2 rounded-full bg-accent/10 px-3 py-1.5 mb-4 border border-accent/20">
+                      <div className="inline-flex items-center gap-2 rounded-xl bg-accent/10 px-3 py-1.5 mb-4 border border-accent/20">
                         <Calendar className="size-3.5 text-accent" />
                         <span className="text-xs font-semibold uppercase tracking-wider text-accent">
                           {item.period}
@@ -132,7 +132,7 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
             transition={{ delay: experience.length * 0.2, duration: 0.5 }}
             viewport={{ once: true }}
           >
-            <div className="flex size-11 items-center justify-center rounded-full border-2 border-background bg-gradient-to-br from-accent/20 to-accent/10 sm:size-16">
+            <div className="flex size-11 items-center justify-center rounded-xl border-2 border-background bg-gradient-to-br from-accent/20 to-accent/10 sm:size-16">
               <div className="size-3 rounded-full bg-accent" />
             </div>
           </motion.div>
@@ -153,7 +153,7 @@ export function Experience({ showHeading = true }: { showHeading?: boolean } = {
           ].map((stat) => (
             <div
               key={stat.labelKey}
-              className="bg-card border border-border rounded-[2rem] px-2 py-5 text-center shadow-[var(--shadow-glow)] sm:px-4 sm:py-6 md:px-6 md:py-8"
+              className="bg-card border border-border rounded-2xl px-2 py-5 text-center shadow-[var(--shadow-glow)] sm:px-4 sm:py-6 md:px-6 md:py-8"
             >
               <p className="text-xl font-bold text-accent sm:text-2xl md:text-3xl">{stat.value}</p>
               <p className="mt-1 break-words text-[10px] uppercase tracking-wide text-muted-foreground sm:text-xs sm:tracking-wider md:text-sm">

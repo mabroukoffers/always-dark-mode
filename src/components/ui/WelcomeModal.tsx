@@ -76,7 +76,7 @@ export function WelcomeModal() {
         aria-describedby="welcome-modal-body"
         dir={dir}
         onClick={(event) => event.stopPropagation()}
-        className="relative border border-border bg-card w-full max-w-lg overflow-hidden rounded-3xl p-8 text-center shadow-2xl animate-scale-in sm:p-10"
+        className="relative border border-border bg-card w-full max-w-lg overflow-hidden rounded-2xl p-8 text-center shadow-2xl animate-scale-in sm:p-10"
       >
         <div className="grid-bg pointer-events-none absolute inset-0 opacity-40" />
 
@@ -85,7 +85,7 @@ export function WelcomeModal() {
           type="button"
           onClick={close}
           aria-label={tr("welcome.close")}
-          className="absolute end-4 top-4 rounded-full p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
+          className="absolute end-4 top-4 rounded-xl p-2 text-muted-foreground transition-colors hover:bg-muted hover:text-foreground"
         >
           <X className="h-4 w-4" />
         </button>

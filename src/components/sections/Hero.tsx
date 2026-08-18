@@ -44,7 +44,7 @@ export function Hero() {
               <p className="max-w-md text-sm sm:text-base font-medium leading-snug text-foreground/90 text-center lg:text-start">
                 {tr("hero.subtitle")}
               </p>
-              <div className="grid size-9 shrink-0 place-items-center rounded-full bg-foreground/10 border border-border text-foreground">
+              <div className="grid size-9 shrink-0 place-items-center rounded-xl bg-foreground/10 border border-border text-foreground">
                 <Trophy className="size-4 text-primary" />
               </div>
             </div>
