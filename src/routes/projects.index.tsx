@@ -249,6 +249,7 @@ export function ProjectsPage() {
               <ProjectGridSkeleton count={perPage} view={view} />
             ) : paginatedProjects.length > 0 ? (
               <>
+                <h2 className="sr-only">{tr("projects.index.results")}</h2>
                 <motion.div
                   layout
                   className={

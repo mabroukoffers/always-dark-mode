@@ -6,6 +6,8 @@ type Dict = Record<string, { en: string; ar: string }>;
 
 export const t: Dict = {
   "nav.works": { en: "WORKS", ar: "الأعمال" },
+  "works.title": { en: "Selected Work", ar: "أعمال مختارة" },
+  "projects.index.results": { en: "Project results", ar: "نتائج المشاريع" },
   "nav.about": { en: "ABOUT", ar: "نبذة" },
   "nav.experience": { en: "AWARDS", ar: "الجوائز" },
   "nav.contact": { en: "CONTACTS", ar: "تواصل" },
