@@ -13,6 +13,13 @@ export const Route = createFileRoute("/experience")({
         content:
           "Professional software engineering experience of Mostafa Samir — .NET 8 Microservices, SignalR IoT telemetry, and multi-tenant marketplace architectures.",
       },
+      { property: "og:title", content: "Experience — Mostafa Samir | Senior Full Stack Engineer" },
+      { property: "og:description", content: "Professional software engineering experience of Mostafa Samir — .NET 8 Microservices, SignalR IoT telemetry, and multi-tenant marketplace architectures." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/experience" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Experience — Mostafa Samir | Senior Full Stack Engineer" },
+      { name: "twitter:description", content: "Professional software engineering experience of Mostafa Samir — .NET 8 Microservices, SignalR IoT telemetry, and multi-tenant marketplace architectures." },
     ],
     links: [{ rel: "canonical", href: "/experience" }],
   }),

@@ -37,6 +37,13 @@ export const Route = createFileRoute("/skills")({
         content:
           "Full technical skills & stack: .NET 8 Microservices, Clean Architecture, Angular, Next.js, SQL Server, Redis, and Azure DevOps.",
       },
+      { property: "og:title", content: "Skills & Stack — Mostafa Samir | Senior Full Stack Engineer" },
+      { property: "og:description", content: "Full technical skills & stack: .NET 8 Microservices, Clean Architecture, Angular, Next.js, SQL Server, Redis, and Azure DevOps." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/skills" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Skills & Stack — Mostafa Samir | Senior Full Stack Engineer" },
+      { name: "twitter:description", content: "Full technical skills & stack: .NET 8 Microservices, Clean Architecture, Angular, Next.js, SQL Server, Redis, and Azure DevOps." },
     ],
     links: [{ rel: "canonical", href: "/skills" }],
   }),

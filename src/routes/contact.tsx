@@ -20,6 +20,13 @@ export const Route = createFileRoute("/contact")({
         content:
           "Get in touch with Mostafa Samir for marketplace engineering, .NET 8 Microservices, or full-stack web applications.",
       },
+      { property: "og:title", content: "Contact — Mostafa Samir | Senior Full Stack Engineer" },
+      { property: "og:description", content: "Get in touch with Mostafa Samir for marketplace engineering, .NET 8 Microservices, or full-stack web applications." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/contact" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "Contact — Mostafa Samir | Senior Full Stack Engineer" },
+      { name: "twitter:description", content: "Get in touch with Mostafa Samir for marketplace engineering, .NET 8 Microservices, or full-stack web applications." },
     ],
     links: [{ rel: "canonical", href: "/contact" }],
   }),

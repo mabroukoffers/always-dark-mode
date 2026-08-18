@@ -25,6 +25,13 @@ export const Route = createFileRoute("/about")({
         content:
           "Senior Full Stack Engineer with 4+ years of experience specializing in high-performance .NET 8 Microservices & Next.js marketplaces.",
       },
+      { property: "og:title", content: "About — Mostafa Samir | Senior Full Stack Engineer" },
+      { property: "og:description", content: "Senior Full Stack Engineer with 4+ years of experience specializing in high-performance .NET 8 Microservices & Next.js marketplaces." },
+      { property: "og:type", content: "website" },
+      { property: "og:url", content: "/about" },
+      { name: "twitter:card", content: "summary_large_image" },
+      { name: "twitter:title", content: "About — Mostafa Samir | Senior Full Stack Engineer" },
+      { name: "twitter:description", content: "Senior Full Stack Engineer with 4+ years of experience specializing in high-performance .NET 8 Microservices & Next.js marketplaces." },
     ],
     links: [{ rel: "canonical", href: "/about" }],
   }),
