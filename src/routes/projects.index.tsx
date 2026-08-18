@@ -146,7 +146,7 @@ export function ProjectsPage() {
                       type="button"
                       onClick={() => setSearchQuery("")}
                       aria-label={tr("projects.index.clear")}
-                      className="absolute end-3 top-1/2 -translate-y-1/2 rounded-lg p-1 text-card-foreground/70 hover:text-card-foreground transition-colors"
+                      className="absolute end-3 top-1/2 -translate-y-1/2 rounded-xl p-1 text-card-foreground/70 hover:text-card-foreground transition-colors"
                     >
                       <X className="size-4" />
                     </button>
@@ -174,7 +174,7 @@ export function ProjectsPage() {
                         <SelectItem
                           key={s.value}
                           value={s.value}
-                          className="cursor-pointer rounded-lg text-sm text-card-foreground hover:bg-foreground/10 focus:bg-foreground/10"
+                          className="cursor-pointer rounded-xl text-sm text-card-foreground hover:bg-foreground/10 focus:bg-foreground/10"
                         >
                           {tr(s.key)}
                         </SelectItem>
@@ -332,7 +332,7 @@ function ViewButton({
       aria-pressed={active}
       aria-label={label}
       title={label}
-      className={`inline-flex size-9 items-center justify-center rounded-lg transition-all ${
+      className={`inline-flex size-9 items-center justify-center rounded-xl transition-all ${
         active ? "bg-foreground text-background font-bold shadow-sm" : "text-foreground/70 hover:text-foreground"
       }`}
     >
