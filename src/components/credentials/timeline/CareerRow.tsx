@@ -83,7 +83,7 @@ export function CareerRow({ item, icon: Icon, open, reduce, onToggle }: CareerRo
             className="overflow-hidden"
           >
             <div
-              className={`border-t px-5 pt-5 pb-6 sm:px-6 ${
+              className={`border-t pad-card ${
                 featured ? "border-background/20" : "border-border"
               }`}
             >
