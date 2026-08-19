@@ -79,7 +79,7 @@ export function ExperiencePreview() {
                   setActiveTab(id);
                   setOpenId(null);
                 }}
-                className={`relative inline-flex items-center gap-2 whitespace-nowrap rounded-xl px-5 py-2.5 type-label transition-colors ${
+                className={`relative inline-flex items-center gap-2 whitespace-nowrap pill-step rounded-xl type-label transition-colors ${
                   active
                     ? "text-background"
                     : "border border-border bg-foreground/5 text-foreground hover:bg-foreground/15"
@@ -98,7 +98,7 @@ export function ExperiencePreview() {
                   <Icon className="size-3.5" />
                   {tr(`events.tab.${id}`)}
                   <span
-                    className={`rounded-md px-1.5 py-0.5 type-tag ${
+                    className={`tag-step rounded-md type-tag ${
                       active ? "bg-background/20" : "bg-foreground/10"
                     }`}
                   >
@@ -142,7 +142,7 @@ export function ExperiencePreview() {
                   <button
                     onClick={() => setOpenId(open ? null : item.id)}
                     aria-expanded={open}
-                    className="flex w-full flex-col gap-4 p-5 text-start sm:flex-row sm:items-center sm:justify-between sm:p-6"
+                    className="flex w-full flex-col gap-4 pad-card text-start sm:flex-row sm:items-center sm:justify-between"
                   >
                     <div className="flex items-center gap-5 sm:gap-7">
                       <span
@@ -205,7 +205,7 @@ export function ExperiencePreview() {
                         className="overflow-hidden"
                       >
                         <div
-                          className={`border-t px-5 pb-6 pt-5 sm:px-6 ${
+                          className={`border-t pad-card ${
                             featured ? "border-background/20" : "border-border"
                           }`}
                         >
@@ -229,7 +229,7 @@ export function ExperiencePreview() {
                             )}
                             {item.status && (
                               <span
-                                className={`rounded-md px-2 py-0.5 type-micro ${
+                                className={`tag-step rounded-md type-micro ${
                                   featured ? "bg-background/20" : "bg-primary/10 text-primary"
                                 }`}
                               >
@@ -293,7 +293,7 @@ export function ExperiencePreview() {
         <div className="mt-10 flex justify-center">
           <Link
             to="/experience"
-            className="inline-flex items-center gap-2 rounded-xl border border-border bg-foreground/5 px-6 py-3 type-label transition-colors hover:bg-foreground/15"
+            className="inline-flex items-center gap-2 pill-step rounded-xl border border-border bg-foreground/5 type-label transition-colors hover:bg-foreground/15"
           >
             {tr("events.cta")}
             <ArrowRight className="size-3.5 rtl:rotate-180" />

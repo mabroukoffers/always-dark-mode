@@ -79,7 +79,7 @@ function ErrorComponent({ error, reset }: { error: Error; reset: () => void }) {
 
           <a
             href="/"
-            className="inline-flex items-center justify-center rounded-xl border border-border px-5 py-2.5 type-body-sm text-foreground"
+            className="inline-flex items-center justify-center pill-step rounded-xl border border-border type-body-sm text-foreground"
           >
             Go home
           </a>

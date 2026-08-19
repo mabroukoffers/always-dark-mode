@@ -21,7 +21,7 @@ export function ProjectFilterChips({ filter, onChange, counts }: ProjectFilterCh
           key={value}
           onClick={() => onChange(value)}
           aria-pressed={filter === value}
-          className={`type-label rounded-xl px-4 sm:px-5 py-2 sm:py-2.5 transition-all duration-200 ${
+          className={`type-label pill-step rounded-xl transition-all duration-200 ${
             filter === value
               ? "bg-primary text-primary-foreground shadow-md scale-105"
               : "border border-border bg-foreground/10 text-foreground/90 hover:bg-foreground/20"
