@@ -713,6 +713,15 @@
 :root {
   --radius: 1.25rem;
 
+  /* Layout + control spacing scale (single source of truth) */
+  --gutter: clamp(1rem, 4vw, 3rem);
+  --pad-card: clamp(1.25rem, 2.2vw, 1.5rem);
+  --pad-pill-x: clamp(1rem, 1.6vw, 1.25rem);
+  --pad-pill-y: clamp(0.5rem, 0.9vw, 0.625rem);
+  --pad-tag-x: 0.5rem;
+  --pad-tag-y: 0.125rem;
+
+
   /* Coral / Dark editorial theme (default) */
   --background: #FF4B35;
   --foreground: #ffffff;
