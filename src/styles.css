@@ -577,7 +577,13 @@
 
 /* Responsive horizontal page gutter (replaces px-4 sm:px-8 md:px-12 / px-5). */
 @utility page-gutter {
-  padding-inline: clamp(1rem, 4vw, 3rem);
+  padding-inline: var(--gutter);
+}
+
+/* Cancel the page gutter so a child can span the full shell width (sticky bars). */
+@utility bleed-gutter {
+  margin-inline: calc(var(--gutter) * -1);
+  padding-inline: var(--gutter);
 }
 
 /* Full-bleed band: owns the background + the gutter, centres nothing. */
@@ -585,8 +591,38 @@
   width: 100%;
   background-color: var(--background);
   color: var(--foreground);
-  padding-inline: clamp(1rem, 4vw, 3rem);
+  padding-inline: var(--gutter);
 }
+
+/* --- Control padding steps ----------------------------------------------
+ * One padding step per control size. Chips, tabs and filter pills must not
+ * hand-roll `px-4 sm:px-5 py-2 sm:py-2.5` again. */
+
+/* Interactive chip / tab / filter pill. */
+@utility pill-step {
+  padding-inline: var(--pad-pill-x);
+  padding-block: var(--pad-pill-y);
+}
+
+/* Tiny count badge or tag sitting inside a pill or card. */
+@utility tag-step {
+  padding-inline: var(--pad-tag-x);
+  padding-block: var(--pad-tag-y);
+}
+
+/* Card interior padding — the single card step (replaces p-5 sm:p-6). */
+@utility pad-card {
+  padding: var(--pad-card);
+}
+
+@utility pad-card-x {
+  padding-inline: var(--pad-card);
+}
+
+@utility pad-card-y {
+  padding-block: var(--pad-card);
+}
+
 
 /* Centred content measures. Width only — never padding, never background. */
 @utility container-page {
