@@ -32,7 +32,7 @@ export function ProjectsToolbar({
 
   return (
     <div
-      className="sticky z-20 -mx-5 mb-5 px-5 py-1.5"
+      className="sticky z-20 bleed-gutter mb-5 py-1.5"
       style={{ top: "calc(var(--nav-h, 4.5rem) + 0.25rem)" }}
     >
       <div className="rounded-2xl bg-card p-2.5 border border-border shadow-glow grid grid-cols-1 gap-2 md:grid-cols-[minmax(0,1fr)_auto_auto] md:items-center">
